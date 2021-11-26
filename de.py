@@ -11,10 +11,12 @@ class De:
     @valeur.setter
     def valeur(self, valeur):
         self._valeur = valeur
-        
+    
+    #Génération de la valeur d'un lancer de dé    
     def lancerDe(self):
         self.valeur = random.randint(1, 6)
-        
+    
+    #renvoie la valeur du dé qui vient d'être lancé    
     def get_valeurDe(self):
         return self.valeur
     
