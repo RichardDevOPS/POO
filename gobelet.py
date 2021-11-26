@@ -18,14 +18,17 @@ class Gobelet:
         self.valeur = 0
         self.des = [ De() for i in range(self.nbDeDes)]
     
+    #On calcule la somme des dès du lancé
     def lancer(self):
         for i in self.des:
             i.lancerDe()
             self.valeur += i.valeur
-        
+    
+    #On renvoie la valeur du lancé    
     def get_valeur(self):
         return self.valeur
-        
+    
+    #On affiche la valeur du lancé    
     def afficher_score(self):
         print(f"Le résultat du lancer est {self.valeur}")
             
