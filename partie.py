@@ -43,11 +43,17 @@ class Partie:
     @staticmethod    
     def lancer(listeJoueurs):
         for i in range(10):
+            print(f"\nLancée {i+1}\n")
             for j in listeJoueurs:
-                j.jouer(Gobelet(3))
+                gob = Gobelet(3)
+                j.jouer(gob)
+                # print(gob.get_valeur())
                 print (j.afficher_score())
-            
+        Partie.afficher_gagnant(listeJoueurs)    
     
-    def afficher_gagnant(self):
-        pass
+    
+    @staticmethod
+    def afficher_gagnant(listeJoueurs):
+        for k in listeJoueurs:
+            print (k.get_score())
     
