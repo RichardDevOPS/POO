@@ -3,7 +3,7 @@ from de import De
 class Gobelet:
     def __init__(self,nbDeDes):
         self.nbDeDes = nbDeDes
-        self.constructor()
+        self.creerListeDe()
         
     @property
     def nbDeDes(self):
@@ -13,9 +13,8 @@ class Gobelet:
     def nbDeDes(self, nbDeDes):
         self._nbDeDes = nbDeDes
         
-    # Avec  constructor(), on créé une liste d'objet correspondant aux nombre de dés passé en paramètre
-     
-    def constructor(self):
+    # Avec  creerListeDe(), on créé une liste d'objet De correspondant aux nombre de dés passé en paramètre
+    def creerListeDe(self):
         self.valeur = 0
         self.des = [ De() for i in range(self.nbDeDes)]
     

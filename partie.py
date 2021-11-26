@@ -1,11 +1,12 @@
+from joueur import Joueur
 from gobelet import Gobelet
 
 class Partie:
-    def __init__(self, joueurs, nb_tours, gobe: Gobelet):
+    def __init__(self, joueurs, nb_tours, nb_de):
         self.joueurs= joueurs
         self.nb_tours =nb_tours
-        self.gobe = gobe
-        self.constructor()
+        self.nb_de = nb_de
+        self.gobe = Gobelet
     
     @property
     def joueurs(self):
@@ -30,15 +31,22 @@ class Partie:
     @gobe.setter
     def gobe(self, gobe):
         self._gobe = gobe
+    
+    @staticmethod    
+    def initialiser(joueurs):
+        listeJoueurs =[]
+        for i in joueurs:
+            listeJoueurs.append(Joueur(i))
+        Partie.lancer(listeJoueurs)
+  
         
-    def constructor(self, nb_tours, nb_des):
-        pass
-        
-    def initialiser():
+    @staticmethod    
+    def lancer(listeJoueurs):
+      for j in listeJoueurs:
+            j.jouer(Gobelet(3))
+            print(j.get_score())
+            
+    
+    def afficher_gagnant(self):
         pass
     
-    def lancer():
-        pass
-    
-    def afficher_gagnant():
-        pass

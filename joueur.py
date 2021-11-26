@@ -3,7 +3,7 @@ from gobelet import Gobelet
 class Joueur:
     def __init__(self, nom):
         self.nom = nom
-        self.constructor()
+        self.score = 0
         
     @property
     def nom(self):
@@ -24,9 +24,6 @@ class Joueur:
     def get_nom(self):
         return self.nom
     
-    def constructor(self):
-        self.score = 0
-    
     def get_score(self):
         return self.score
     
@@ -37,7 +34,7 @@ class Joueur:
     def afficher_score(self):
         print(f"Le score de {self.nom} est de {self.score}")
         
-J1=Joueur("Richard")
-gob=Gobelet(3)
-J1.jouer(gob)
-print(J1.get_score())
+# J1=Joueur("Richard")
+# gob=Gobelet(3)
+# J1.jouer(gob)
+# print(J1.get_score())
