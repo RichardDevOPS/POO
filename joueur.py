@@ -32,7 +32,7 @@ class Joueur:
         self.score = self.score + gob.get_valeur()
         
     def afficher_score(self):
-        print(f"Le score de {self.nom} est de {self.score}")
+        return(f"Le score de {self.nom} est de {self.score}")
         
 # J1=Joueur("Richard")
 # gob=Gobelet(3)
