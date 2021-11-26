@@ -54,6 +54,12 @@ class Partie:
     
     @staticmethod
     def afficher_gagnant(listeJoueurs):
+        tabjoueurs=[]
         for k in listeJoueurs:
-            print (k.get_score())
+            listscore = [k.get_nom(),k.get_score()]
+            tabjoueurs.append(listscore)
+            # tabjoueurs.append(k.get_nom())
+            # tabjoueurs.append(k.get_score(),k.get_nom())
+        classement = sorted(tabjoueurs, key=lambda x: x[1], reverse=True)
+        print(f"\nLe gagnant est {classement[0][0]}")
     
